@@ -126,6 +126,8 @@ curl -X 'POST' \
 ---
 
 ## 9. Observations Images
+
+![image alt](https://github.com/Ksjanardan/email-classification-system/blob/0f7122244d89e7de42b778635f744e5b08ddd162/Accurecy.png)
 ![image alt](https://github.com/Ksjanardan/email-classification-system/blob/5181261b0044f3c12445b76dbe3358fb5972c9ac/Deployed%20API.png)
 
 
