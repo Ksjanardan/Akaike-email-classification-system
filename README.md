@@ -107,8 +107,8 @@ Accepts email content and returns classification with PII masking.
 ---
 
 ## 7. Sample Testing via `curl`
-curl -X 'POST' \
-  'https://janardhanks537-email-pii-classifier.hf.space/classify' \
+
+curl -X 'POST' \'https://janardhanks537-email-pii-classifier.hf.space/classify' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
