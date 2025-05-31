@@ -53,7 +53,7 @@ Each entity is replaced with a corresponding placeholder like `[phone]`, `[aadha
 Health check endpoint.
 **Response:**
 ```json
-{"{"message":"Welcome to the Email Classification and PII Masking API!"}"}
+{"message":"Welcome to the Email Classification and PII Masking API!"}
 ```
 
 ### `POST /classify`
