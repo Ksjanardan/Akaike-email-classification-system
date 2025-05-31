@@ -16,14 +16,20 @@ Given an incoming email text, the system should:
 ---
 
 ## 3. Model Details
--Overall Approach: Employs a two-pronged machine learning strategy for distinct tasks.
--**Email Classification:**
--**Feature Extraction:** Uses a TF-IDF Vectorizer to transform text into numerical features, capturing word importance.
--**Classifier:** Employs a supervised machine learning classifier (e.g., Logistic Regression or similar scikit-learn model, based on your training choice) trained on categorized email datasets.
--**PII Detection:**
--**Library Used:** Utilizes the spaCy library.
--**Specific Model:** Leverages spaCy's pre-trained statistical model, en_core_web_sm, for Named Entity Recognition (NER).
--**Functionality:** Identifies various PII types including names, phone numbers, email addresses, and locations.
+Overall Approach: Employs a two-pronged machine learning strategy for distinct tasks.
+**Email Classification:**
+
+**Feature Extraction:** Uses a TF-IDF Vectorizer to transform text into numerical features, capturing word importance.
+
+**Classifier:** Employs a supervised machine learning classifier (e.g., Logistic Regression or similar scikit-learn model, based on your training choice) trained on categorized email datasets.
+
+**PII Detection:**
+
+**Library Used:** Utilizes the spaCy library.
+
+**Specific Model:** Leverages spaCy's pre-trained statistical model, en_core_web_sm, for Named Entity Recognition (NER).
+
+**Functionality:** Identifies various PII types including names, phone numbers, email addresses, and locations.
 
 ---
 
