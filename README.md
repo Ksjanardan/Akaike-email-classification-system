@@ -120,7 +120,7 @@ curl -X 'POST' \
 ---
 
 ## 8. Deployment & Source Code Links
-- **Hugging Face Deployment**: [https://github.com/Ksjanardan/email-classification-system/](https://github.com/Ksjanardan/email-classification-system/)
+- **Hugging Face Deployment**: [https://huggingface.co/spaces/janardhanks537/email-pii-classifier](https://huggingface.co/spaces/janardhanks537/email-pii-classifier)
 - **GitHub Repository**: [https://github.com/Ksjanardan/email-classification-system/](https://github.com/Ksjanardan/email-classification-system/)
 
 ---
