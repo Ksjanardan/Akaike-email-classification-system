@@ -149,7 +149,7 @@ curl -X 'POST' \
 
 
 ## 10. Conclusion
-In conclusion, this project successfully developed and deployed a robust FastAPI-based system for automated email classification and Personally Identifiable Information (PII) masking. By integrating machine learning models (TF-IDF and a classifier) with spaCy's advanced Named Entity Recognition capabilities, the solution effectively addresses critical challenges in email management and data privacy. Containerization with Docker and deployment on Hugging Face Spaces ensured a scalable, accessible, and easily maintainable API, providing a practical tool for efficient email processing and enhanced data security
+In conclusion, this project successfully developed and deployed a robust FastAPI-based system for automated email classification and Personally Identifiable Information (PII) masking. By integrating machine learning models (TF-IDF and a classifier), achieving a 75.26% accuracy in email classification, and utilizing spaCy's advanced Named Entity Recognition capabilities, the solution effectively addresses critical challenges in email management and data privacy. Containerization with Docker and deployment on Hugging Face Spaces ensured a scalable, accessible, and easily maintainable API, providing a practical tool for efficient email processing and enhanced data security.
 
 ---
 
