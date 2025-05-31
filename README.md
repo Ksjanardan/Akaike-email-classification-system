@@ -1,35 +1,40 @@
 # Email Classification System for Support Team
 
 ## 1. Project Overview
-This project is developed as part of the internship assignment for Akaike Technologies. The goal is to build an API-based system that classifies support team emails into categories and masks personally identifiable information (PII) in the email content.
+This project implements a FastAPI for email classification and PII masking, utilizing machine learning models. Containerized with Docker, the API is deployed on Hugging Face Spaces, offering public access and interactive testing. It efficiently classifies emails, masks sensitive data, and facilitates demasking.
 
 ---
 
 ## 2. Problem Statement
-Given an incoming email with a subject and body, the system should:
-- Detect and mask any personally identifiable information (PII)
-- Classify the email into predefined categories (e.g., complaint, query, return, etc.)
-- Return the results in a strictly defined JSON format
+Given an incoming email text, the system should:
+
+-Accurately classify the email into one of several predefined categories (e.g., Sales, HR, Marketing).
+-Detect and mask any personally identifiable information (PII) present within the email content.
+-Provide functionality to demask previously masked PII using a provided mapping.
+-Return all processing results (e.g., masked text, classification, extracted PII) in a well-defined JSON format.
 
 ---
 
 ## 3. Model Details
-- **Model Used**: Logistic Regression (or specify your actual model)
-- **Vectorizer**: TfidfVectorizer
-- **Training Data**: Custom labeled dataset with email samples
+-Overall Approach: Employs a two-pronged machine learning strategy for distinct tasks.
+-**Email Classification:**
+-**Feature Extraction:** Uses a TF-IDF Vectorizer to transform text into numerical features, capturing word importance.
+-**Classifier:** Employs a supervised machine learning classifier (e.g., Logistic Regression or similar scikit-learn model, based on your training choice) trained on categorized email datasets.
+-**PII Detection:**
+-**Library Used:** Utilizes the spaCy library.
+-**Specific Model:** Leverages spaCy's pre-trained statistical model, en_core_web_sm, for Named Entity Recognition (NER).
+-**Functionality:** Identifies various PII types including names, phone numbers, email addresses, and locations.
 
 ---
 
 ## 4. System Pipeline
-1. **Input**: Accepts JSON with `subject` and `body`
-2. **Combine Text**: Concatenates subject and body into one string
-3. **PII Masking**: Detects and replaces PII using regular expressions and named entity recognition (NER)
-4. **Text Cleaning**: Lowercasing, removing stopwords, special characters, etc.
-5. **Vectorization**: Transforms text using TfidfVectorizer
-6. **Classification**: Predicts the category using the trained model
-7. **Output**: Returns a structured JSON response
-
----
+**1. Input:** Accepts JSON payload containing the email text (e.g., in a content field) for processing.
+**2. Text Preprocessing:** The raw input text undergoes cleaning, including lowercasing, removal of punctuation, special characters, and digits, and elimination of common stopwords.
+**3. PII Detection & Masking:** Utilizes spaCy's NER model to identify and then mask sensitive PII (e.g., names, phone numbers) within the cleaned text using designated placeholders.
+**4. Text Vectorization:** For classification purposes, the (potentially masked) text is transformed into numerical features using the pre-trained TF-IDF Vectorizer.
+**5. Email Classification:** The vectorized text is fed into the trained machine learning model to predict the email's category.
+**6. Output Generation:** Assembles the processed results, including the masked text, identified PII mapping (if applicable), and the predicted email category.
+**7. Output:** Returns a structured JSON response containing the processed information.
 
 ## 5. PII Detection & Masking
 Types of PII detected include:
@@ -48,7 +53,7 @@ Each entity is replaced with a corresponding placeholder like `[phone]`, `[aadha
 Health check endpoint.
 **Response:**
 ```json
-{"message": "🚀 Email Classifier API is running!"}
+{"{"message":"Welcome to the Email Classification and PII Masking API!"}"}
 ```
 
 ### `POST /classify`
@@ -94,15 +99,15 @@ curl -X POST "https://sahanavaidya-akaike-email-classification-system.hf.space/c
 ---
 
 ## 8. Deployment & Source Code Links
-- **Hugging Face Deployment**: [https://sahanavaidya-akaike-email-classification-system.hf.space](https://sahanavaidya-akaike-email-classification-system.hf.space)
-- **GitHub Repository**: [https://github.com/YOUR_USERNAME/akaike-email-classifier](https://github.com/YOUR_USERNAME/akaike-email-classifier)
+- **Hugging Face Deployment**: [https://github.com/Ksjanardan/email-classification-system/](https://github.com/Ksjanardan/email-classification-system/)
+- **GitHub Repository**: [https://github.com/Ksjanardan/email-classification-system/](https://github.com/Ksjanardan/email-classification-system/)
 
 ---
 
 ## 9. Conclusion
-This system is a lightweight and production-ready solution for automating email triaging and PII protection in customer support communications. The API strictly adheres to the format required by Akaike Technologies for automated evaluation.
+In conclusion, this project successfully developed and deployed a robust FastAPI-based system for automated email classification and Personally Identifiable Information (PII) masking. By integrating machine learning models (TF-IDF and a classifier) with spaCy's advanced Named Entity Recognition capabilities, the solution effectively addresses critical challenges in email management and data privacy. Containerization with Docker and deployment on Hugging Face Spaces ensured a scalable, accessible, and easily maintainable API, providing a practical tool for efficient email processing and enhanced data security
 
 ---
 
-Prepared by: **Sahana Vaidya**
+### Designed and executed by : **JANARDHAN K S**
 
