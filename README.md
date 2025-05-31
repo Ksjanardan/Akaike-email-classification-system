@@ -28,13 +28,13 @@ Given an incoming email text, the system should:
 ---
 
 ## 4. System Pipeline
-**1. Input:** Accepts JSON payload containing the email text (e.g., in a content field) for processing.
-**2. Text Preprocessing:** The raw input text undergoes cleaning, including lowercasing, removal of punctuation, special characters, and digits, and elimination of common stopwords.
-**3. PII Detection & Masking:** Utilizes spaCy's NER model to identify and then mask sensitive PII (e.g., names, phone numbers) within the cleaned text using designated placeholders.
-**4. Text Vectorization:** For classification purposes, the (potentially masked) text is transformed into numerical features using the pre-trained TF-IDF Vectorizer.
-**5. Email Classification:** The vectorized text is fed into the trained machine learning model to predict the email's category.
-**6. Output Generation:** Assembles the processed results, including the masked text, identified PII mapping (if applicable), and the predicted email category.
-**7. Output:** Returns a structured JSON response containing the processed information.
+-**1. Input:** Accepts JSON payload containing the email text (e.g., in a content field) for processing.
+-**2. Text Preprocessing:** The raw input text undergoes cleaning, including lowercasing, removal of punctuation, special characters, and digits, and elimination of common stopwords.
+-**3. PII Detection & Masking:** Utilizes spaCy's NER model to identify and then mask sensitive PII (e.g., names, phone numbers) within the cleaned text using designated placeholders.
+-**4. Text Vectorization:** For classification purposes, the (potentially masked) text is transformed into numerical features using the pre-trained TF-IDF Vectorizer.
+-**5. Email Classification:** The vectorized text is fed into the trained machine learning model to predict the email's category.
+-**6. Output Generation:** Assembles the processed results, including the masked text, identified PII mapping (if applicable), and the predicted email category.
+-**7. Output:** Returns a structured JSON response containing the processed information.
 
 ## 5. PII Detection & Masking
 Types of PII detected include:
