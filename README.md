@@ -140,7 +140,7 @@ curl -X 'POST' \
 
 ![image alt](https://github.com/Ksjanardan/email-classification-system/blob/bd329aeac23de60bf9596ed299552c7bc9b79bd4/Hugging%20Face%20API.png)
 
-  ## Huggyface API
+  ## Huggingface API
 
 
 ![image alt](https://github.com/Ksjanardan/email-classification-system/blob/5181261b0044f3c12445b76dbe3358fb5972c9ac/Deployed%20API.png)
