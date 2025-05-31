@@ -1,0 +1,7 @@
+pandas
+scikit-learn
+spacy
+fastapi
+uvicorn
+pydantic
+nltk
