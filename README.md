@@ -131,13 +131,16 @@ curl -X 'POST' \
 
   ## Accurecy
 
+
 ![image alt](https://github.com/Ksjanardan/email-classification-system/blob/bd329aeac23de60bf9596ed299552c7bc9b79bd4/Hugging%20Face%20API.png)
 
   ## Huggyface API
 
+
 ![image alt](https://github.com/Ksjanardan/email-classification-system/blob/5181261b0044f3c12445b76dbe3358fb5972c9ac/Deployed%20API.png)
 
   ## API Deployment
+
 
 ## 10. Conclusion
 In conclusion, this project successfully developed and deployed a robust FastAPI-based system for automated email classification and Personally Identifiable Information (PII) masking. By integrating machine learning models (TF-IDF and a classifier) with spaCy's advanced Named Entity Recognition capabilities, the solution effectively addresses critical challenges in email management and data privacy. Containerization with Docker and deployment on Hugging Face Spaces ensured a scalable, accessible, and easily maintainable API, providing a practical tool for efficient email processing and enhanced data security
