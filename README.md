@@ -69,21 +69,32 @@ Accepts email content and returns classification with PII masking.
 **Response:**
 ```json
 {
-  "input_email_body": "Important: KYC Update Please update your Aadhar number 1234-5678-9123 in the system.",
-  "list_of_masked_entities": [
+  "detail": [
     {
-      "position": [55, 59],
-      "classification": "expiry_no",
-      "entity": "1234"
+      "type": "missing",
+      "loc": [
+        "body",
+        "masked_email"
+      ],
+      "msg": "Field required",
+      "input": {
+        "subject": "Important: KYC Update",
+        "body": "Please update your Aadhar number 1234-5678-9123 in the system."
+      }
     },
     {
-      "position": [55, 69],
-      "classification": "aadhar_num",
-      "entity": "1234-5678-9123"
+      "type": "missing",
+      "loc": [
+        "body",
+        "masked_entities"
+      ],
+      "msg": "Field required",
+      "input": {
+        "subject": "Important: KYC Update",
+        "body": "Please update your Aadhar number 1234-5678-9123 in the system."
+      }
     }
-  ],
-  "masked_email": "Important: KYC Update Please update your Aadhar number [expiry_no][aadhar_num] in the system.",
-  "category_of_the_email": "complaint"
+  ]
 }
 ```
 
@@ -91,9 +102,14 @@ Accepts email content and returns classification with PII masking.
 
 ## 7. Sample Testing via `curl`
 ```bash
-curl -X POST "https://sahanavaidya-akaike-email-classification-system.hf.space/classify" \
-  -H "Content-Type: application/json" \
-  -d "{\"subject\": \"Important: KYC Update\", \"body\": \"Please update your Aadhar number 1234-5678-9123 in the system.\"}"
+curl -X 'POST' \
+  'https://janardhanks537-email-pii-classifier.hf.space/demask-pii/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "subject": "Important: KYC Update",
+  "body": "Please update your Aadhar number 1234-5678-9123 in the system."
+}'
 ```
 
 ---
