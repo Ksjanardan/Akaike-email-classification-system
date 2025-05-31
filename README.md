@@ -11,9 +11,11 @@ In today's digital landscape, organizations face challenges managing vast volume
 **3. Model Details**
 
 Overall Approach: Employs a two-pronged machine learning strategy for distinct tasks.
+
 Email Classification:
 Feature Extraction: Uses a TF-IDF Vectorizer to transform text data into numerical features, capturing the importance of words within the email corpus.
 Classifier: Feeds vectorized data into a supervised machine learning classifier (e.g., Logistic Regression or a similar scikit-learn model, based on your training choice) trained on categorized email datasets.
+
 PII Detection:
 Library Used: Utilizes the spaCy library.
 Specific Model: Leverages spaCy's pre-trained statistical model, en_core_web_sm, for Named Entity Recognition (NER).
