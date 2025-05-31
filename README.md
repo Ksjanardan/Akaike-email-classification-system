@@ -107,15 +107,16 @@ Accepts email content and returns classification with PII masking.
 ---
 
 ## 7. Sample Testing via `curl`
-
-curl -X 'POST' \'https://janardhanks537-email-pii-classifier.hf.space/classify' \
+```
+curl -X 'POST' \
+  'https://janardhanks537-email-pii-classifier.hf.space/classify' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
   "subject": "Important: KYC Update",
   "body": "Please update your Aadhar number 1234-5678-9123 in the system."
 }'
-
+```
 ---
 
 ## 8. Deployment & Source Code Links
