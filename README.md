@@ -135,7 +135,7 @@ curl -X 'POST' \
 
 ![image alt](https://github.com/Ksjanardan/email-classification-system/blob/0f7122244d89e7de42b778635f744e5b08ddd162/Accurecy.png)
 
-  ## Accurecy
+  ## Accuracy
 
 
 ![image alt](https://github.com/Ksjanardan/email-classification-system/blob/bd329aeac23de60bf9596ed299552c7bc9b79bd4/Hugging%20Face%20API.png)
